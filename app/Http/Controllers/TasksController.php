@@ -32,8 +32,6 @@ class TasksController extends Controller
     }
 
     // postでtasks/にアクセスされた場合の「新規登録処理」
-    public function store(Request $request)
-    {
          public function store(Request $request)
     {
         // タスクを作成
