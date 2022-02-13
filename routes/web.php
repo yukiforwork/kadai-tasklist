@@ -13,10 +13,6 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 //アクセス制限
 Route::group(['middleware' => ['auth']], function () {
-    Route::resource('tasks', 'TasksController', ['only' => ['create','show','edit','destroy']]);
+    Route::resource('tasks', 'TasksController', ['only' => ['create','store','show','edit','update','destroy']]);
     }
 );
-
-
-// タスク
-Route::resource('tasks', 'TasksController');
